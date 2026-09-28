@@ -1,3 +1,4 @@
+import { MagicRings } from "@/components/magic-rings";
 import { siteConfig } from "@/data/portfolio";
 
 const navItems = [
@@ -10,18 +11,7 @@ export function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero__backdrop" aria-hidden="true" />
-      <video
-        className="hero__video"
-        data-testid="hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/media/hero-poster.webp"
-        aria-hidden="true"
-      >
-        <source src="/media/hero-loop.mp4" type="video/mp4" />
-      </video>
+      <MagicRings />
       <div className="hero__overlay" aria-hidden="true" />
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Xinhe Chen, back to top">
