@@ -1,13 +1,13 @@
 :root {
-  --ink: #151815;
-  --ink-soft: #4f554f;
-  --paper: #f2f0e9;
-  --paper-deep: #e7e3d9;
-  --line: rgba(21, 24, 21, 0.18);
-  --night: #111712;
-  --night-soft: #cad0c7;
-  --accent: #d8ff4f;
-  --accent-ink: #17200d;
+  --ink: #eef2ff;
+  --ink-soft: #aab5d6;
+  --paper: #080b25;
+  --paper-deep: #10143d;
+  --line: rgba(157, 166, 255, 0.2);
+  --night: #050817;
+  --night-soft: #c3cbed;
+  --accent: #7c8cff;
+  --accent-ink: #080b25;
   --shell: min(1280px, calc(100vw - 80px));
   --sans: "Helvetica Neue", "Avenir Next", Avenir, Arial, sans-serif;
   --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
@@ -84,8 +84,8 @@ a:focus-visible {
 .hero__backdrop {
   z-index: -3;
   background:
-    radial-gradient(circle at 74% 35%, rgba(151, 183, 119, 0.3), transparent 25%),
-    linear-gradient(125deg, #202922 0%, #101a16 54%, #29342a 100%);
+    radial-gradient(circle at 74% 35%, rgba(124, 140, 255, 0.28), transparent 28%),
+    linear-gradient(125deg, #07133b 0%, #090a22 54%, #26134f 100%);
 }
 
 .hero__backdrop::before,
@@ -97,11 +97,7 @@ a:focus-visible {
 }
 
 .hero__backdrop::before {
-  width: 62vw;
-  height: 62vw;
-  right: -12vw;
-  top: -20vw;
-  border-radius: 50%;
+  display: none;
 }
 
 .hero__backdrop::after {
@@ -114,14 +110,14 @@ a:focus-visible {
 .hero__video {
   z-index: -2;
   object-fit: cover;
-  opacity: 0.48;
+  opacity: 0.32;
 }
 
 .hero__overlay {
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(10, 16, 12, 0.88) 0%, rgba(10, 16, 12, 0.46) 60%, rgba(10, 16, 12, 0.7) 100%),
-    linear-gradient(0deg, rgba(8, 12, 9, 0.66) 0%, transparent 45%);
+    linear-gradient(90deg, rgba(5, 8, 23, 0.9) 0%, rgba(5, 8, 23, 0.42) 60%, rgba(19, 8, 45, 0.72) 100%),
+    linear-gradient(0deg, rgba(5, 8, 23, 0.72) 0%, transparent 45%);
 }
 
 .nav {
