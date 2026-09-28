@@ -97,11 +97,7 @@ a:focus-visible {
 }
 
 .hero__backdrop::before {
-  width: 62vw;
-  height: 62vw;
-  right: -12vw;
-  top: -20vw;
-  border-radius: 50%;
+  display: none;
 }
 
 .hero__backdrop::after {
