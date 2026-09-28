@@ -11,7 +11,31 @@ export function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero__backdrop" aria-hidden="true" />
-      <MagicRings />
+      <div style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}>
+        <MagicRings
+          color="#8961ae"
+          colorTwo="#4f51c2"
+          ringCount={6}
+          speed={1}
+          attenuation={10}
+          lineThickness={2}
+          baseRadius={0.35}
+          radiusStep={0.1}
+          scaleRate={0.1}
+          opacity={1}
+          blur={0}
+          noiseAmount={0.18}
+          rotation={0}
+          ringGap={1.5}
+          fadeIn={0.7}
+          fadeOut={0.5}
+          followMouse={false}
+          mouseInfluence={0.2}
+          hoverScale={1.2}
+          parallax={0.05}
+          clickBurst={false}
+        />
+      </div>
       <div className="hero__overlay" aria-hidden="true" />
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Xinhe Chen, back to top">

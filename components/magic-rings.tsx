@@ -29,7 +29,35 @@ void main() {
   gl_FragColor = vec4(color, clamp(glow * uOpacity, 0.0, 0.84));
 }`;
 
-export function MagicRings() {
+interface MagicRingsProps {
+  color?: string;
+  colorTwo?: string;
+  ringCount?: number;
+  speed?: number;
+  attenuation?: number;
+  lineThickness?: number;
+  baseRadius?: number;
+  radiusStep?: number;
+  scaleRate?: number;
+  opacity?: number;
+  blur?: number;
+  noiseAmount?: number;
+  rotation?: number;
+  ringGap?: number;
+  fadeIn?: number;
+  fadeOut?: number;
+  followMouse?: boolean;
+  mouseInfluence?: number;
+  hoverScale?: number;
+  parallax?: number;
+  clickBurst?: boolean;
+}
+
+export function MagicRings({
+  color = "#37b7ff",
+  colorTwo = "#9b5cff",
+  opacity = 1,
+}: MagicRingsProps) {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -49,8 +77,8 @@ export function MagicRings() {
     camera.position.z = 1;
     const uniforms = {
       uTime: { value: 0 }, uResolution: { value: 0 }, uSize: { value: new THREE.Vector2() },
-      uColor: { value: new THREE.Color("#37b7ff") }, uColorTwo: { value: new THREE.Color("#9b5cff") },
-      uOpacity: { value: 1 },
+      uColor: { value: new THREE.Color(color) }, uColorTwo: { value: new THREE.Color(colorTwo) },
+      uOpacity: { value: opacity },
     };
     const material = new THREE.ShaderMaterial({ vertexShader, fragmentShader, uniforms, transparent: true });
     const quad = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), material);
@@ -79,7 +107,7 @@ export function MagicRings() {
       quad.geometry.dispose();
       mount.removeChild(renderer.domElement);
     };
-  }, []);
+  }, [color, colorTwo, opacity]);
 
   return <div ref={mountRef} className="magic-rings-container" aria-hidden="true" />;
 }
