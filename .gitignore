@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+coverage/
+
+# Local environment files and secrets. Keep a sanitized template if needed.
+.env
+.env.*
+!.env.example
+
+# Local hosting/platform state.
+.vercel/
+
+*.log
+*.tsbuildinfo
+.DS_Store
+.superpowers/
+.worktrees/
+
+node_modules/
+.next/
+*.tsbuildinfo
+next-env.d.ts
